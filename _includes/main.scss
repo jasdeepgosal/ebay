@@ -1,11 +1,110 @@
-$heading-font-color: #222;
+$heading-font-color: #424242;
 $main-font-color: #222;
-$disabled-font-color: #369ff4;
-$accent-color: #c2a67d;
+$hover-font-color: #555;
+$accent-color: #aaa; $highlight-accent-color: rgb(205, 201, 203);
+$link-color: $heading-font-color;
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body {
-  font-family: 'Open Sans', sans-serif;
+.warg-ebay-page {
   color: $main-font-color;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading-font-color;
+    font-weight: bold;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+
+    &:visited {
+      color: $link-color;
+    }
+
+    &:active,
+    &:hover {
+      color: $hover-font-color;
+    }
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+
+    span {
+      padding-bottom: .25em;
+      display: inline-block;
+      border-bottom: 3px solid $highlight-accent-color;
+    }
+
+    &:hover {
+      color: $hover-font-color;
+    }
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  .tab {
+    .container {
+      border-top: 1px solid $accent-color;
+      padding: 1em 0;
+
+      &.with-columns {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    p {
+      margin-top: 1em;
+    }
+
+    .leading-paragraph {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    .disclaimer {
+      font-style: italic;
+    }
+
+    .column {
+      margin-right: 3em;
+      max-width: 500px;
+
+      &.image {
+        margin-right: 0px;
+        width: 350px;
+      }
+    }
+
+    table {
+      margin: 1em 0;
+
+      td {
+        padding-right: 1em;
+      }
+    }
+
+    section {
+      margin-bottom: 1em;
+    }
+
+    .important {
+      font-weight: bold;
+    }
+  }
 }
