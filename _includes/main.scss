@@ -6,6 +6,7 @@ $highlight-accent-color: rgb(205, 201, 203);
 $link-color: $heading-font-color;
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Coda');
 
 .warg-ebay-page {
   color: $main-font-color;
@@ -22,6 +23,8 @@ $link-color: $heading-font-color;
   h6 {
     color: $heading-font-color;
     font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Coda', sans-serif;
   }
 
   input {
@@ -29,9 +32,11 @@ $link-color: $heading-font-color;
   }
 
   label {
+    text-transform: uppercase;
+    font-family: 'Coda', sans-serif;
     font-size: 1.5em;
     display: inline-block;
-    padding-bottom: .25em;
+    padding: .5em 0 .25em;
     margin-right: 1em;
     color: $accent-color;
     border-bottom: 3px solid rgba(0, 0, 0, 0);
