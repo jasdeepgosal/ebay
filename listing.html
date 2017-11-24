@@ -4,10 +4,22 @@ title: Listing
 permalink: /listing/
 ---
 
-<div class="tab">
+<input id="details_tab_input" type="radio" name="tabs" checked>
+<label for="details_tab_input">Details</label>
+
+<input id="size_tab_input" type="radio" name="tabs" checked>
+<label for="size_tab_input">Size &amp; Fit</label>
+
+<input id="shipping_tab_input" type="radio" name="tabs" checked>
+<label for="shipping_tab_input">Shipping &amp; Returns</label>
+
+<input id="about_tab_input" type="radio" name="tabs" checked>
+<label for="about_tab_input">About</label>
+
+<div class="tab" id ="details_tab">
   <h2>
     <span>
-      The Details
+      Details
     </span>
   </h2>
   <div class="container with-columns">
@@ -41,7 +53,7 @@ permalink: /listing/
   </div>
 </div>
 
-<div class="tab">
+<div class="tab" id="size_tab">
   <h2>
     <span>
       Size &amp; Fit
@@ -73,7 +85,7 @@ permalink: /listing/
   </div>
 </div>
 
-<div class="tab">
+<div class="tab" id="shipping_tab">
   <h2>
     <span>
       Shipping &amp; Returns
@@ -89,7 +101,7 @@ permalink: /listing/
   </div>
 </div>
 
-<div class="tab">
+<div class="tab" id="about_tab">
   <h2>
     <span>
       About

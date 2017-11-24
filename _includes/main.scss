@@ -1,15 +1,16 @@
 $heading-font-color: #424242;
 $main-font-color: #222;
 $hover-font-color: #555;
-$accent-color: #aaa; $highlight-accent-color: rgb(205, 201, 203);
+$accent-color: #aaa;
+$highlight-accent-color: rgb(205, 201, 203);
 $link-color: $heading-font-color;
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .warg-ebay-page {
   color: $main-font-color;
-  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 
   h1,
   h2,
@@ -19,6 +20,35 @@ $link-color: $heading-font-color;
   h6 {
     color: $heading-font-color;
     font-weight: bold;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 1.5em;
+    display: inline-block;
+    padding-bottom: .25em;
+    margin-right: 1em;
+    color: $accent-color;
+
+    &:hover {
+      color: $hover-font-color;
+      cursor: pointer;
+    }
+  }
+
+  input:checked + label {
+    border-bottom: 3px solid $highlight-accent-color;
+    color: $heading-font-color;
+  }
+
+  #details_tab_input:checked ~ #details_tab,
+  #size_tab_input:checked ~ #size_tab,
+  #shipping_tab_input:checked ~ #shipping_tab,
+  #about_tab_input:checked ~ #about_tab {
+    display: block;
   }
 
   a {
@@ -43,13 +73,9 @@ $link-color: $heading-font-color;
     font-size: 1.5em;
 
     span {
-      padding-bottom: .25em;
-      display: inline-block;
       border-bottom: 3px solid $highlight-accent-color;
-    }
-
-    &:hover {
-      color: $hover-font-color;
+      display: inline-block;
+      padding-bottom: .25em;
     }
   }
 
@@ -58,8 +84,14 @@ $link-color: $heading-font-color;
   }
 
   .tab {
+    display: none;
+
     @media screen and (max-width: 650px) {
       margin-bottom: 1em;
+    }
+
+    h2 {
+      display: none;
     }
 
     .container {
@@ -81,8 +113,8 @@ $link-color: $heading-font-color;
     }
 
     .leading-paragraph {
-      margin-top: 0;
       margin-bottom: 1em;
+      margin-top: 0;
     }
 
     .disclaimer {
@@ -100,7 +132,7 @@ $link-color: $heading-font-color;
       }
 
       &.image {
-        margin-right: 0px;
+        margin-right: 0;
 
         @media screen and (max-width: 1000px) {
           display: none;
