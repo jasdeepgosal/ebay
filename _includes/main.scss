@@ -9,8 +9,10 @@ $link-color: $heading-font-color;
 
 .warg-ebay-page {
   color: $main-font-color;
-  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  min-height: 400px;
+  line-height: 1.25em;
+  font-family: 'Open Sans', sans-serif;
 
   h1,
   h2,
@@ -39,6 +41,18 @@ $link-color: $heading-font-color;
       color: $hover-font-color;
       cursor: pointer;
     }
+
+    br {
+      display: none;
+    }
+
+    @media screen and (max-width: 565px) {
+      font-size: 1.2em;
+
+      br {
+        display: inline;
+      }
+    }
   }
 
   input:checked + label {
@@ -54,9 +68,14 @@ $link-color: $heading-font-color;
     opacity: 1;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   a {
     color: $link-color;
     text-decoration: underline;
+    transition: all .25s ease-in-out;
 
     &:visited {
       color: $link-color;
