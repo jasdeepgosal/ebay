@@ -192,4 +192,12 @@ $link-color: $heading-font-color;
       font-weight: bold;
     }
   }
+
+  .footer {
+    margin: 1em 0;
+
+    ul {
+      margin-top: 1em;
+    }
+  }
 }
